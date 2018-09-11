@@ -1,0 +1,46 @@
+h1 {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    padding-top: 40px;
+}
+
+.available, 
+.devoured {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.available h3, 
+.add,
+.devoured h3
+  {
+    text-align: center;
+}
+
+#pizza_name {
+    height: 25px;
+    width: 200px;
+    border: 1px grey solid;
+    border-radius: 3px;
+
+    padding-left: 10px;
+}
+
+#submit {
+    height: 30px;
+    width: 90px;
+    border-radius: 3px;
+    background: lightcoral;
+    color: white;
+    font-size: 1em;
+}
+
+#submit:active {
+    background: white;
+    color: lightcoral;
+}

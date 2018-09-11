@@ -1,0 +1,32 @@
+<main>
+    <h1>Eat-da-Pizza</h1>
+    <div class="grid">
+        <div class="available">
+            <h3>Available Pizzas</h3>
+            {{#each pizzas}}
+                {{#unless devoured}}
+                <div>
+                    {{pizza_name}}
+                    <button class="devour" onclick="devour({{pizza_id}})">Devour</button>
+                </div>
+                {{/unless}}
+            {{/each}}
+        </div>
+        <div class="add">
+            <img src="/img/pizza_emoji.png" alt="Pizza" height="300px">
+            <h3>Add A New Pizza</h3>
+            <input id="pizza_name" type="text">
+            <button id="submit" onclick="addPizza()">Submit</button>
+        </div>
+        <div class="devoured">
+            <h3>Devoured Pizzas</h3>
+            {{#each pizzas}}
+                {{#if devoured}}
+                <div>
+                    {{pizza_name}}
+                </div>
+                {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</main>
